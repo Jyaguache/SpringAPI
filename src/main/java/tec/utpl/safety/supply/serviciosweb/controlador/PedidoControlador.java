@@ -29,9 +29,6 @@ public class PedidoControlador {
     public ResponseEntity<List<Pedido>> listProducts(){
         List<Pedido> pedidos = new ArrayList<>();
         pedidos = pedidoServicio.listarPedidos();
-        if(pedidos.isEmpty()){
-            return ResponseEntity.noContent().build();
-        }
         return ResponseEntity.ok(pedidos);
     }
 
